@@ -213,6 +213,72 @@ namespace perlin {
 			// return avg mapped from [-1, 1] (theoretically) to [0,1]
 			return map(avg, -1, 1, 0, 1);
 		}
+
+		/*
+		accumulated noise
+		*/
+
+		// 1D accumulated noise
+		float accumulatedNoise1D(float x, int octaves = 8, float lacunarity = 2.0f, float gain = 0.5f) {
+			float result = 0.0f;
+			float amplitude = 1.0f;
+			float frequency = 1.0f;
+			float maxVal = 0.0f; // used to normalize result
+
+			for (; octaves > 0; octaves--) {
+				result += noise1D(x * frequency) * amplitude;
+
+				maxVal += amplitude;
+
+				amplitude *= gain;
+				frequency *= lacunarity;
+			}
+
+			// return normalized result
+			return result / maxVal;
+		}
+
+		// 2D accumulated noise
+		float accumulatedNoise2D(float x, float y, int octaves = 8, float lacunarity = 2.0f, float gain = 0.5f) {
+			float result = 0.0f;
+			float amplitude = 1.0f;
+			float frequency = 1.0f;
+			float maxVal = 0.0f; // used to normalize result
+
+			for (; octaves > 0; octaves--) {
+				result += noise2D(x * frequency, y * frequency) * amplitude;
+
+				maxVal += amplitude;
+
+				amplitude *= gain;
+				frequency *= lacunarity;
+			}
+
+			// return normalized result
+			return result / maxVal;
+		}
+
+		// 3D accumulated noise
+		float accumulatedNoise2D(float x, float y, float z, int octaves = 8, float lacunarity = 2.0f, float gain = 0.5f) {
+			float result = 0.0f;
+			float amplitude = 1.0f;
+			float frequency = 1.0f;
+			float maxVal = 0.0f; // used to normalize result
+
+			for (; octaves > 0; octaves--) {
+				result += noise3D(x * frequency, y * frequency, z * frequency) * amplitude;
+
+				maxVal += amplitude;
+
+				amplitude *= gain;
+				frequency *= lacunarity;
+			}
+
+			// return normalized result
+			return result / maxVal;
+		}
+
+
 	};
 }
 

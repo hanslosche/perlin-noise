@@ -3,6 +3,6 @@ C:\Users\Hans\Desktop\CVED\development\c++\projects\perlinNoise\perlinNoise\imag
 C:\Users\Hans\Desktop\CVED\development\c++\projects\perlinNoise\perlinNoise\image.hpp(207,1): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
 C:\Users\Hans\Desktop\CVED\development\c++\projects\perlinNoise\perlinNoise\image.hpp(229,1): warning C4244: '*=': conversion from 'float' to 'LONG', possible loss of data
 C:\Users\Hans\Desktop\CVED\development\c++\projects\perlinNoise\perlinNoise\image.hpp(244,1): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Hans\Desktop\CVED\development\c++\projects\perlinNoise\perlinNoise\main.cpp(22,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Hans\Desktop\CVED\development\c++\projects\perlinNoise\perlinNoise\main.cpp(22,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Hans\Desktop\CVED\development\c++\projects\perlinNoise\perlinNoise\main.cpp(22,48): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Hans\Desktop\CVED\development\c++\projects\perlinNoise\perlinNoise\main.cpp(22,40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   perlinNoise.vcxproj -> C:\Users\Hans\Desktop\CVED\development\c++\projects\perlinNoise\perlinNoise\Debug\perlinNoise.exe

@@ -19,7 +19,7 @@ int main() {
 
 	for (int y = 0; y < 512; y++) {
 		for (int x = 0; x < 512; x++) {
-			double p = map.noise2D(x / fx, y / fy);
+			double p = map.accumulatedNoise2D(x / fx, y / fy, 8, 2.0f, 0.55f);
 			image.setPixel(x, y, p, p, p);
 		}
 	}
